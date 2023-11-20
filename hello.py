@@ -1,21 +1,14 @@
 #!/usr/bin/env python3
 
-"""Comentarios multilinha
-Geralmente usados para dar instruções de execução do codigo
-"""
-__version__ = "0.0.1"
+"""Tabuada do 1 ao 10"""
+
+__version__ = "0.1.0"
 __author__ = "Dillon Patrick"
-__licence__ = "Unlicense"
 
-import os
+numeros = list(range(1, 11))
 
-current_language = os.getenv("LANG", "us_US")[:5]
-
-msg = "Hello World"
-
-if current_language == "pt_BR":
-    msg = "Ola Mundo"
-elif current_language == "it_IT":
-    msg = "Ciao Mondo"
-
-print(msg)
+for numero in numeros:
+    print("Tabuada do:", numero)
+    for outro_numero in numeros:
+        multiplication = numero * outro_numero
+        print(f"{numero} x {outro_numero} = {multiplication}")
