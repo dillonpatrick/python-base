@@ -2,15 +2,20 @@
 import os
 import sys
 
-if os.path.exists("names.txt"):
-    print("O arquivo existe")
-    input("...")
+try:
     names = open("names.txt").readlines()
+except Exception as e:  # Bare except
+    print(f"{str(e)}")
+    sys.exit(1)
+    # TODO: Usar o retry
 else:
-    print("[Error] File 'names.txt' not found.")
+    print("Sucesso!!!")
+finally:
+    print("Executa isso sempre")
 
-if len(names) >= 3:
+
+try:
     print(names[2])
-else:
-    print("[Error] Missing name in the list.")
+except Exception as e:  # Bare except
+    print(f"{str(e)}")
     sys.exit(1)
