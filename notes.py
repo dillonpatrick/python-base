@@ -41,12 +41,16 @@ if arguments[0] == "read":
 
 
 if arguments[0] == "new":
-    title = arguments[1]  # TODO: Tratar exception
-    text = [
-        f"{title}",
-        input("tag:").strip(),
-        input("text:\n").strip(),
-    ]
+    try:
+        title = arguments[1]
+        text = [
+            f"{title}",
+            input("tag:").strip(),
+            input("text:\n").strip(),
+        ]
+    except Exception as e:
+        print(f"{str(e)}")
+        sys.exit(1)
 
     with open(filepath, "a") as file_:
         file_.write("\t".join(text) + "\n")
