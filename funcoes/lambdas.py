@@ -23,6 +23,10 @@ operacoes = {
     "div": lambda a, b: a / b,
 }
 
+
 resultado = operacoes[operacao](int(n1), int(n2))
 
 print(f"O resultado é: {resultado}")
+
+nome = "dillon"
+print((lambda n: f"hello {n}")(nome))
