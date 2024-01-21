@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
 
+"""
+Algumas regras:
+
+A função lambda pode receber argumentos
+A função lambda não pode retornar valor
+A função lambda não DEVE ser definida como variável
+A função lambda não pode ter mais de uma expressão
+"""
+
 names = ["Dillon", "Celina", "Jhow", "Allan", "Alanna", "Irineu", "Amanda", "Kethelin"]
 
 
